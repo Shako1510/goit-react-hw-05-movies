@@ -6,7 +6,6 @@ import { Container, Header, Link } from "./SharedLayout.styled";
 
 export const SharedLayout = () => {
     return (
-
         <Container>
             <Header>
                 <nav>
