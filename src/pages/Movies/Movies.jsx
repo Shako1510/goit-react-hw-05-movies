@@ -5,7 +5,11 @@ import React from "react";
 
 const Movies = () => {
     return (
-        <p> Movies </p>
+        <main>
+
+            <h1> Movies </h1>
+        </main>
+
     )
 }
 

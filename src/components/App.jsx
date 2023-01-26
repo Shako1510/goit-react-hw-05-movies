@@ -1,15 +1,32 @@
-import { Routes, Route, NavLink } from "react-router-dom";
-import HomePage from "pages/HomePage/HomePage";
-import Movies from "pages/Movies/Movies";
-import { HederBox } from "./AppHeder.styled";
-import styled from "styled-components";
+import { Routes, Route } from "react-router-dom";
+import { SharedLayout } from "./SharedLayout/SharedLayout";
+import { lazy } from "react";
+
+// import { HederBox, StyledLink } from "./AppHeder.styled";
 // import Movie from "./Movie/Movie";
 // import { useState, useEffect } from "react";
 // import GetImages from "./Api/Api";
 
-
+const Home = lazy(() => import("../pages/Home/Home"));
+const Movies = lazy(() => import("../pages/Movies/Movies"));
 
 export const App = () => {
+
+
+  return (
+
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route index element={<Home />} />
+        <Route path="movies" element={<Movies />} />
+      </Route>
+
+
+    </Routes>
+
+  );
+};
+
 
   // const [movies, setMovies] = useState([]);
 
@@ -28,35 +45,4 @@ export const App = () => {
   // }, [])
 
 
-  const StyledLink = styled(NavLink)`
-  color: black;
 
-  &.active {
-    color: orange;
-  }
-`;
-
-  return (
-    <div>
-
-      <nav>
-        <HederBox>
-          <StyledLink to='/'> HomePage </StyledLink>
-          <StyledLink to='/movies'> Movies </StyledLink>
-        </HederBox>
-
-
-      </nav>
-
-
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/movies" element={<Movies />} />
-
-      </Routes>
-    </div >
-
-
-
-  );
-};
