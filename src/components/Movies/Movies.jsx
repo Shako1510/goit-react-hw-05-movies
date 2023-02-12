@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams, useLocation } from 'react-router-dom';
-import { fetchMoviesBySearchQuery } from 'components/Api/Api';
-import Loading from 'components/Loading/Loading';
+import { fetchMoviesBySearchQuery } from 'components/fetch/Fetch';
+import Loading from 'components/loading/Loading';
 import noImage from '../../images/no-image.png';
 import { ListMovies, ListItem, StyledLink, ListBox, Form, Button, Input } from './MoviesStyled';
 

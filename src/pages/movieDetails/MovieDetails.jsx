@@ -1,4 +1,4 @@
-import MovieDetails from '../../components/MovieDetails/MovieDetails';
+import MovieDetails from '../../components/movieDetails/MovieDetails';
 
 import { Outlet } from "react-router-dom"
 

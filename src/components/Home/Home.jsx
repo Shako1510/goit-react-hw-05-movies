@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { fetchMoviesTrending } from "components/Api/Api";
-import Loading from 'components/Loading/Loading';
+import { fetchMoviesTrending } from "components/fetch/Fetch";
+import Loading from 'components/loading/Loading';
 import noImage from '../../images/no-image.png';
 import { ListMovie, Title, ListItem, ListBox } from "./HomeStyled";
 
@@ -44,4 +44,4 @@ const Home = () => {
 
 
 
-export default Home;
+export default Home 

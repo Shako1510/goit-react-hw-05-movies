@@ -1,15 +1,15 @@
 import { Routes, Route } from 'react-router-dom';
 import { lazy } from 'react';
-import Home from 'components/Home/Home';
-import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
+import Home from '../home/Home';
+import NotFoundPage from 'pages/notFoundPage/NotFoundPage';
 import { StyledApp } from './AppStyled';
-import Cast from '../Cast/Cast';
-import Reviews from '../Reviews/Reviews';
-import Layout from 'components/Layout/Layout';
+import Cast from '../cast/Cast';
+import Reviews from '../reviews/Reviews';
+import Layout from 'components/layout/Layout';
 
 
-const Movie = lazy(() => import('../../pages/MoviesPage/MoviesPage'));
-const MovieDetails = lazy(() => import('../../pages/MovieDetailsPage/MovieDetailsPage'));
+const Movie = lazy(() => import('../../pages/moviesPage/MoviesPage'));
+const MovieDetails = lazy(() => import('../../pages/movieDetails/MovieDetails'));
 
 
 export const App = () => {
@@ -32,38 +32,6 @@ export const App = () => {
     </StyledApp>
   );
 };
-
-// import { Routes, Route } from "react-router-dom";
-// import { lazy } from "react";
-
-// import { SharedLayout } from "../SharedLayout/SharedLayout";
-
-// import NotFound from "../NotFound/NotFound";
-
-
-
-// const Home = lazy(() => import("../Home/Home"));
-// const Movies = lazy(() => import("../../pages/Movies/Movies/Movies"));
-
-// export const App = () => {
-
-
-
-
-//   return (
-
-//     <Routes>
-//       <Route path="/" element={<SharedLayout />}>
-//         <Route index element={<Home />} />
-//         <Route path="movies" element={<Movies />} />
-//         <Route path="*" element={<NotFound />} />
-//       </Route>
-
-
-//     </Routes>
-
-//   );
-// };
 
 
 
