@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
 import { lazy } from 'react';
-import Home from '../Home/Home';
-import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
-import { StyledApp } from './App.styled';
+import Home from 'components/Home/Home';
+import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
+import { StyledApp } from './AppStyled';
 import Cast from '../Cast/Cast';
 import Reviews from '../Reviews/Reviews';
-import Layout from '../SharedLayout/Layout';
+import Layout from 'components/Layout/Layout';
 
 
 const Movie = lazy(() => import('../../pages/MoviesPage/MoviesPage'));
@@ -32,7 +32,6 @@ export const App = () => {
     </StyledApp>
   );
 };
-
 
 // import { Routes, Route } from "react-router-dom";
 // import { lazy } from "react";

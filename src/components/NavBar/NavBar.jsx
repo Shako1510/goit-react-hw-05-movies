@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Header, ButtonHome, ButtonMovies } from './NavBar.styled';
+import { Header, ButtonHome, ButtonMovies } from './NavBarStyled';
 
 const NavBar = () => {
     return (

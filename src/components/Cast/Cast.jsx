@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMoviesActor } from '../Api/Api';
-import Loading from '../Loading/Loading';
-import noImage from '../../images/noImage.png';
+import Loading from 'components/Loading/Loading';
+import noImage from '../../images/no-image.png';
 
 const Cast = () => {
     const [cast, setCast] = useState([]);
@@ -23,18 +23,23 @@ const Cast = () => {
     return (
         <div>
             {loading && <Loading />}
-            <ul>
-                {cast.map(({ id, name, character, profile_path }) =>
-                    <li key={id}>
-                        <img
-                            src={profile_path ? `${URL}${profile_path}` : noImage}
-                            alt={name}
-                        />
-                        <h2>{name}</h2>
-                        <p>Character: {character}</p>
 
-                    </li>
-                )}
+            <ul>
+
+                {cast.map(({ id, name, character, profile_path }) => {
+                    return (
+                        <li key={id}>
+                            <img
+                                src={profile_path ? `${URL}${profile_path}` : noImage}
+                                alt={name}
+                            />
+                            <h2>{name}</h2>
+                            <p>Character: {character}</p>
+                        </li>
+                    );
+                })}
+
+
             </ul>
         </div>
     )

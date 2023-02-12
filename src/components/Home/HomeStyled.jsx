@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from '@emotion/styled';
 
 export const ListBox = styled.div`
 padding: 60px;

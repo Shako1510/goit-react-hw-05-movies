@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMoviesReviews } from '../Api/Api';
-import Loading from '../Loading/Loading';
+import { fetchMoviesReviews } from 'components/Api/Api';
+import Loading from 'components/Loading/Loading';
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
@@ -21,6 +21,7 @@ const Reviews = () => {
     return (
         <div>
             {loading && <Loading />}
+
             <ul>
                 {reviews.map(({ author, content, id }) => {
                     return (

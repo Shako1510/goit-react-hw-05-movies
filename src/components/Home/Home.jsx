@@ -1,9 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { fetchMoviesTrending } from "../Api/Api";
-import Loading from '../Loading/Loading';
-import noImage from '../../images/noImage.png';
-import { ListMovie, Title, ListItem, ListBox } from "./HomePages.styled";
+import { fetchMoviesTrending } from "components/Api/Api";
+import Loading from 'components/Loading/Loading';
+import noImage from '../../images/no-image.png';
+import { ListMovie, Title, ListItem, ListBox } from "./HomeStyled";
 
 
 
@@ -44,4 +44,4 @@ const Home = () => {
 
 
 
-export default Home 
+export default Home;
