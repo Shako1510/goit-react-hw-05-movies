@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 const KEY = '15589180ce6c6d33d7bc8f830aab28ab';
 const BASE_URL = 'https://api.themoviedb.org/3';
 const media_type = 'movie';
@@ -20,14 +21,17 @@ export async function fetchMoviesTrending() {
 
 export async function fetchMoviesBySearchQuery(query) {
     try {
-        const response = await axios.get(`https://api.themoviedb.org/3/search/movie/?query=${query}&api_key=${KEY}`)
+        const response = await axios.get(`${BASE_URL}/search/movie/?query=${query}&api_key=${KEY}`)
         const arrayMovies = await response.data.results;
+        console.log(arrayMovies);
         return arrayMovies;
     }
     catch (error) {
         console.log(error)
     }
 }
+
+
 export async function fetchMoviesById(id) {
     try {
         const response = await axios.get(`${BASE_URL}/movie/${id}?api_key=${KEY}`)

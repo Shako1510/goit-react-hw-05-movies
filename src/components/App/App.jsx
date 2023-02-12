@@ -8,8 +8,8 @@ import Reviews from '../Reviews/Reviews';
 import Layout from '../SharedLayout/Layout';
 
 
-const Movie = lazy(() => import('../../pages/Movies/Movies/Movies'));
-const MovieDetails = lazy(() => import('../../pages/MovieDetails/MovieDetails'));
+const Movie = lazy(() => import('../../pages/MoviesPage/MoviesPage'));
+const MovieDetails = lazy(() => import('../../pages/MovieDetailsPage/MovieDetailsPage'));
 
 
 export const App = () => {

@@ -2,12 +2,12 @@ import { fetchMoviesById } from "../Api/Api";
 import { useState, useEffect } from 'react';
 import { useParams, Link, useLocation, NavLink } from 'react-router-dom';
 import Loading from '../Loading/Loading';
-import noImage from '../../images/no-image.png';
+import noImage from '../../images/noImage.png';
 import { Button, ListItem, ListLink } from "./MovieDetails.styled";
 
 
 const MovieDetails = () => {
-    const imgUrl = 'https://image.tmdb.org/t/p/w500';
+    const imgUrl = 'https://image.tmdb.org/t/p/w400';
     const [movieDetails, setMovieDetails] = useState(null);
     const [loading, setLoading] = useState(false);
     const { movieId } = useParams();
@@ -36,7 +36,6 @@ const MovieDetails = () => {
                 <Button> Go back </Button>
             </Link>
             <div>
-
                 <div>
                     {loading && <Loading />}
                     <div>

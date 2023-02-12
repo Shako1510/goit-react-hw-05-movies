@@ -1,8 +1,8 @@
+import { fetchMoviesBySearchQuery } from '../Api/Api';
 import { useState, useEffect } from 'react';
 import { useSearchParams, useLocation } from 'react-router-dom';
-import { fetchMoviesBySearchQuery } from '../Api/Api';
 import Loading from '../Loading/Loading';
-import noImage from '../../images/no-image.png';
+import noImage from '../../images/noImage.png';
 import { ListMovies, ListItem, StyledLink, ListBox, Form, Button, Input } from './Movies.styled';
 
 const Movies = () => {
@@ -33,7 +33,6 @@ const Movies = () => {
                 .catch(error => console.log(error))
                 .finally(setLoading(false))
         }
-
         if (!movies) {
             return;
         }
@@ -65,7 +64,6 @@ const Movies = () => {
                         return (
                             <ListItem key={id}>
                                 <StyledLink to={`/movies/${id}`} state={{ from: location }}>
-
                                     <img src={
                                         poster_path ? `https://image.tmdb.org/t/p/w342${poster_path}` : noImage} alt={title} width={260}
                                         height={340} />

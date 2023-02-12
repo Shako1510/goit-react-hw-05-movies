@@ -21,7 +21,6 @@ const Reviews = () => {
     return (
         <div>
             {loading && <Loading />}
-
             <ul>
                 {reviews.map(({ author, content, id }) => {
                     return (
