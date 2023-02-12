@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMoviesReviews } from '../Fetch';
-import Loading from 'components/Loading';
+import { fetchMoviesReviews } from '../fetch/Fetch';
+import Loading from 'components/loading/Loading';
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);

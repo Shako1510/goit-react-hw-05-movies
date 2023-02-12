@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMoviesActor } from './Fetch';
-import Loading from 'components/Loading';
+import { fetchMoviesActor } from '../fetch/Fetch';
+import Loading from 'components/loading/Loading';
 import noImage from '../../images/no-image.png';
 
 const Cast = () => {

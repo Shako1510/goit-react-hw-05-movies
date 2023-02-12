@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { fetchMoviesTrending } from "components/Fetch";
-import Loading from 'components/Loading';
+import { fetchMoviesTrending } from "components/fetch/Fetch";
+import Loading from 'components/loading/Loading';
 import noImage from '../../images/no-image.png';
 import { ListMovie, Title, ListItem, ListBox } from "./HomeStyled";
 
