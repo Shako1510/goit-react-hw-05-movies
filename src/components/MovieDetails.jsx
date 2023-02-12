@@ -1,7 +1,7 @@
-import { fetchMoviesById } from "components/fetch/Fetch";
+import { fetchMoviesById } from "components/Fetch";
 import { useState, useEffect } from 'react';
 import { useParams, Link, useLocation, NavLink } from 'react-router-dom';
-import Loading from 'components/loading/Loading';
+import Loading from 'components/Loading';
 import noImage from '../../images/no-image.png';
 import { Button, ListItem, ListLink } from "./MovieDetailStyled";
 
