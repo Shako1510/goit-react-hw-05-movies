@@ -1,5 +1,5 @@
 import { fetchMoviesById } from "components/fetch/Fetch";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams, Link, useLocation, NavLink } from 'react-router-dom';
 import Loading from 'components/loading/Loading';
 import noImage from '../../images/no-image.png';
@@ -12,8 +12,10 @@ const MovieDetails = () => {
     const [loading, setLoading] = useState(false);
     const { movieId } = useParams();
     const location = useLocation();
-    const backHrefLink = location.state?.from ?? '/';
-
+    // const backHrefLink = location.state?.from ?? '/';
+    const locationRef = useRef(
+        location.state?.from?.pathname + location.state?.from?.search
+    );
 
 
     useEffect(() => {
@@ -32,7 +34,7 @@ const MovieDetails = () => {
 
     return (
         <div>
-            <Link to={backHrefLink}>
+            <Link to={locationRef.current ? locationRef.current : '/movies'}>
                 <Button> Go back </Button>
             </Link>
             <div>
